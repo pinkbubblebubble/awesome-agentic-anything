@@ -31,7 +31,6 @@ jobs:
             --no-progress
             --accept 200,206,429
             --max-retries 2
-            --exclude-mail
             "./**/*.md"
           output: ./lychee-report.md
           # Fail the job on broken links for push/PR, but not for scheduled runs
