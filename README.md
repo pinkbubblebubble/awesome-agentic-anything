@@ -1,4 +1,4 @@
-# Awesome Agentic *Anything* [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
+# Awesome Agentic *Anything* [![Awesome](https://awesome.re/badge.svg)](https://awesome.re) [![Link Check](https://github.com/pinkbubblebubble/awesome-agentic-anything/actions/workflows/link-check.yml/badge.svg)](https://github.com/pinkbubblebubble/awesome-agentic-anything/actions/workflows/link-check.yml)
 
 > A curated list of **agentic systems across every domain** — not "any AI", but *agentic* AI, wherever it shows up.
 
