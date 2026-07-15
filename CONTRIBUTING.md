@@ -39,6 +39,10 @@ Guidelines:
 - **Link to the canonical source** — the GitHub repo, or the official site/docs for closed-source products.
 - **No dead links.** Check the link resolves before submitting.
 
+## Finding Entries
+
+Don't rank purely by stars — that systematically hides new and niche projects. When curating, also search **by name and concept** (e.g. `agent-native`, `*-anything`, protocol/benchmark names), not just "top agent frameworks". Small but conceptually central projects belong here too.
+
 ## Adding a New Domain
 
 "Anything" means the domain list grows. If you're adding an agentic system in a domain we don't have yet (legal, medical, gaming, security, DevOps…), feel free to propose a new `### 🔖 Agentic X` subsection. Add at least one solid entry with it, and update the [Contents](README.md#contents) table.

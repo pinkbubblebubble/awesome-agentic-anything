@@ -33,6 +33,7 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) before submitting.
 - [🏗️ Building Blocks & Infrastructure](#️-building-blocks--infrastructure)
   - [Frameworks & Libraries](#frameworks--libraries)
   - [Protocols & Interop](#protocols--interop)
+  - [Agent-Native Interfaces & Resource Agents](#agent-native-interfaces--resource-agents)
   - [Memory & State](#memory--state)
   - [Evaluation & Benchmarks](#evaluation--benchmarks)
   - [Observability & Tracing](#observability--tracing)
@@ -106,6 +107,15 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) before submitting.
 - [AITP](https://github.com/nearai/aitp) — NEAR AI's Agent Interaction & Transaction Protocol for cross-trust-boundary messaging plus payments.
 - [Eclipse LMOS](https://github.com/eclipse-lmos) — Eclipse Foundation project: a vendor-neutral platform and protocol for enterprise multi-agent systems.
 - [Coral Protocol](https://github.com/Coral-Protocol/coral-server) — "Kubernetes for AI agents": registry, runtimes, security, and orchestration for multi-agent systems.
+
+### Agent-Native Interfaces & Resource Agents
+
+> A newer layer: instead of making agents parse human interfaces, these make the **resource itself agent-native** — auto-generating CLIs, skills, and callable interfaces so agents can drive any software or content reliably.
+
+- [CLI-Anything](https://github.com/HKUDS/CLI-Anything) — HKU Data Intelligence Lab tool that auto-generates command-line interfaces so agents can control any software (GIMP, Blender, LibreOffice…) natively instead of via fragile UI automation. ★~45k
+- [html-anything](https://github.com/nexu-io/html-anything) — Agentic HTML editor where your local agent writes and ships HTML across many output surfaces (deck, poster, report, social). ★~8k
+- [agent-native](https://github.com/BuilderIO/agent-native) — Framework for agent-native apps: define an action once, then expose it via UI, agent, HTTP, MCP, A2A, and CLI. ★~3.7k
+- [agentic-anything](https://github.com/thuqixuan/agentic-anything) — Turns any resource (websites, PDFs, videos, repos, databases) into an agent-native representation and a callable "resource agent" over chat/MCP/HTTP, with SHA-256 evidence provenance.
 
 ### Memory & State
 
