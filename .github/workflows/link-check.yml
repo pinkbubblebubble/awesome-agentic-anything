@@ -1,0 +1,47 @@
+name: Link Check
+
+# Verifies every URL in the Markdown files still resolves.
+# - On push / PR: fails the check (blocks merge) if a link is broken.
+# - Weekly + manual: doesn't fail the run; instead opens an issue listing dead links.
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  schedule:
+    - cron: "0 6 * * 1" # every Monday 06:00 UTC
+  workflow_dispatch:
+
+permissions:
+  issues: write
+
+jobs:
+  link-check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Check links with lychee
+        id: lychee
+        uses: lycheeverse/lychee-action@v2
+        with:
+          # Accept redirects and rate-limit (429) responses as OK to cut false positives.
+          args: >-
+            --no-progress
+            --accept 200,206,429
+            --max-retries 2
+            --exclude-mail
+            "./**/*.md"
+          output: ./lychee-report.md
+          # Fail the job on broken links for push/PR, but not for scheduled runs
+          # (scheduled runs open an issue instead — see the step below).
+          fail: ${{ github.event_name != 'schedule' }}
+
+      - name: Open issue on broken links (scheduled runs only)
+        if: github.event_name == 'schedule' && steps.lychee.outputs.exit_code != 0
+        uses: peter-evans/create-issue-from-file@v5
+        with:
+          title: "🔗 Link Checker found broken links"
+          content-filepath: ./lychee-report.md
+          labels: link-rot, automated

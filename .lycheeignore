@@ -1,0 +1,17 @@
+# URLs the link checker should skip.
+# These hosts often block automated requests (403/999) and cause false
+# positives in CI. Real link rot on GitHub, arXiv, docs, etc. is still caught.
+# Add a host here only after confirming a link is a false positive, not truly dead.
+
+# Vendor / marketing sites behind bot protection
+https://cursor.com
+https://devin.ai
+https://windsurf.com
+https://openai.com/index/.*
+https://cdn.openai.com/.*
+
+# Course / dataset platforms that rate-limit or gate bots
+https://www.deeplearning.ai/.*
+https://academy.langchain.com/.*
+https://www.kaggle.com/.*
+https://huggingface.co/.*
