@@ -1,0 +1,126 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  html,body { width:1200px; height:420px; }
+  body{
+    font-family:-apple-system,"Helvetica Neue",Arial,sans-serif;
+    background:#05070d;
+    color:#e8ecf4;
+    overflow:hidden;
+    position:relative;
+  }
+  /* layered background */
+  .bg{ position:absolute; inset:0; }
+  .grad{
+    position:absolute; inset:0;
+    background:
+      radial-gradient(900px 520px at 78% 8%, rgba(110,168,254,.20), transparent 60%),
+      radial-gradient(760px 520px at 12% 108%, rgba(53,208,186,.18), transparent 60%),
+      linear-gradient(160deg,#070b16 0%,#05070d 55%,#04060b 100%);
+  }
+  .grid{
+    position:absolute; inset:0;
+    background-image:
+      linear-gradient(rgba(255,255,255,.045) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,255,255,.045) 1px, transparent 1px);
+    background-size:34px 34px;
+    -webkit-mask-image:radial-gradient(1000px 500px at 50% 40%, #000 55%, transparent 100%);
+            mask-image:radial-gradient(1000px 500px at 50% 40%, #000 55%, transparent 100%);
+  }
+  svg.net{ position:absolute; inset:0; width:1200px; height:420px; }
+  .node{ fill:#0a1222; stroke:rgba(124,242,156,.55); stroke-width:1.4; }
+  .node.big{ fill:#0b1526; stroke:rgba(110,168,254,.8); stroke-width:1.8; }
+  .edge{ stroke:rgba(140,170,220,.16); stroke-width:1.2; fill:none; }
+  .edge.hot{ stroke:rgba(124,242,156,.30); }
+
+  .wrap{ position:absolute; inset:0; display:flex; flex-direction:column;
+    align-items:center; justify-content:center; text-align:center; padding-top:6px; }
+  .kicker{
+    font-size:15px; letter-spacing:.42em; text-transform:uppercase;
+    color:#8aa0c2; font-weight:600; margin-bottom:22px;
+    padding-left:.42em;
+  }
+  .kicker b{ color:#7cf29c; font-weight:700; }
+  .word{
+    font-weight:800; font-size:120px; line-height:.92; letter-spacing:-.03em;
+    display:flex; align-items:baseline; gap:0;
+  }
+  .word .a1{ color:#eaf0fb; }
+  .forall{
+    background:linear-gradient(135deg,#7cf29c 0%,#35d0ba 46%,#6ea8fe 100%);
+    -webkit-background-clip:text; background-clip:text; color:transparent;
+    font-family:"Times New Roman",Georgia,serif; font-weight:700;
+    transform:translateY(2px);
+  }
+  .rest{ color:#eaf0fb; }
+  .agentic{
+    display:block; font-weight:600; font-size:34px; letter-spacing:.02em;
+    color:#aab8d0; margin-top:6px;
+  }
+  .agentic .hl{
+    background:linear-gradient(135deg,#7cf29c,#35d0ba);
+    -webkit-background-clip:text; background-clip:text; color:transparent; font-weight:800;
+  }
+  .tag{ margin-top:30px; font-size:19px; color:#9fb0cc; letter-spacing:.01em; }
+  .tag i{ color:#e8ecf4; font-style:normal; font-weight:600; }
+  .chips{ display:flex; gap:10px; margin-top:26px; flex-wrap:wrap; justify-content:center; max-width:900px; }
+  .chip{
+    font-size:14px; color:#c3d0e6; padding:7px 15px; border-radius:999px;
+    border:1px solid rgba(150,175,215,.22); background:rgba(255,255,255,.03);
+    font-weight:500; letter-spacing:.01em;
+  }
+  .chip .d{ color:#7cf29c; margin-right:7px; }
+</style>
+</head>
+<body>
+  <div class="bg">
+    <div class="grad"></div>
+    <div class="grid"></div>
+    <svg class="net" viewBox="0 0 1200 420">
+      <g>
+        <path class="edge hot" d="M150,90 L330,150"/>
+        <path class="edge" d="M330,150 L120,250"/>
+        <path class="edge hot" d="M330,150 L250,330"/>
+        <path class="edge" d="M1050,70 L880,150"/>
+        <path class="edge hot" d="M880,150 L1080,240"/>
+        <path class="edge" d="M880,150 L980,330"/>
+        <path class="edge hot" d="M880,150 L720,300"/>
+        <path class="edge" d="M150,90 L120,250"/>
+      </g>
+      <g>
+        <circle class="node" cx="150" cy="90" r="6"/>
+        <circle class="node big" cx="330" cy="150" r="9"/>
+        <circle class="node" cx="120" cy="250" r="6"/>
+        <circle class="node" cx="250" cy="330" r="6"/>
+        <circle class="node" cx="1050" cy="70" r="6"/>
+        <circle class="node big" cx="880" cy="150" r="9"/>
+        <circle class="node" cx="1080" cy="240" r="6"/>
+        <circle class="node" cx="980" cy="330" r="6"/>
+        <circle class="node" cx="720" cy="300" r="6"/>
+      </g>
+    </svg>
+  </div>
+
+  <div class="wrap">
+    <div class="kicker">Awesome&nbsp;·&nbsp;<b>Agentic</b>&nbsp;·&nbsp;Anything</div>
+    <div class="word">
+      <span class="a1">agentic&nbsp;</span><span class="forall">∀</span><span class="rest">nything</span>
+    </div>
+    <span class="agentic">any domain &mdash; but it must be <span class="hl">agentic</span></span>
+    <div class="tag">A curated list of agentic systems across every domain, and the infra behind them.</div>
+    <div class="chips">
+      <span class="chip"><span class="d">▸</span>coding</span>
+      <span class="chip"><span class="d">▸</span>science</span>
+      <span class="chip"><span class="d">▸</span>browser</span>
+      <span class="chip"><span class="d">▸</span>research</span>
+      <span class="chip"><span class="d">▸</span>robotics</span>
+      <span class="chip"><span class="d">▸</span>finance</span>
+      <span class="chip"><span class="d">▸</span>security</span>
+      <span class="chip"><span class="d">▸</span>devops</span>
+    </div>
+  </div>
+</body>
+</html>
