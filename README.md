@@ -191,6 +191,7 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) before submitting.
 - [gptme](https://github.com/gptme/gptme) — Early (2023) terminal agent that writes code, runs the shell, and browses the web; can run persistently. ★~4k
 - [Refact.ai](https://github.com/smallcloudai/refact) — Open-source, local-first IDE agent that plans, executes, and iterates end-to-end. ★~2.4k
 - [RA.Aid](https://github.com/ai-christianson/RA.Aid) — LangGraph-based agent combining research, planning, and multi-step implementation. ★~2.2k
+- [YYLO](https://github.com/yylo-dev/yylo) — Terminal orchestrator that plans coding work on a Kanban board and drives Claude Code, Codex, and Gemini CLI agents through feature worktrees to validated merges. ★~60
 - [Cursor](https://cursor.com) — AI-native IDE (Anysphere) whose Agent Mode does autonomous multi-file edits and runs commands. *(closed-source)*
 - [Devin](https://devin.ai) — Cognition's autonomous "AI software engineer" that plans, writes, tests, and ships in a cloud VM. *(closed-source)*
 - [Windsurf](https://windsurf.com) — Agentic IDE (formerly Codeium) whose Cascade agent reads the full codebase and runs multi-step tasks. *(closed-source)*
