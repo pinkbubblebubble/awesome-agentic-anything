@@ -145,6 +145,7 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) before submitting.
 - [AndroidWorld](https://github.com/google-research/android_world) — 116 tasks across 20 real Android apps on a live emulator, with dynamic task variation. ★~0.8k
 - [TheAgentCompany](https://github.com/TheAgentCompany/TheAgentCompany) — Measures agents on realistic professional tasks inside a simulated software company. ★~0.7k
 - [ClawBench](https://github.com/TIGER-AI-Lab/ClawBench) — Benchmark for browser agents on 283 everyday tasks across live websites, with isolated execution, request interception, and five-layer run traces. ★~0.5k
+- [WebsiteBench](https://github.com/TIGER-AI-Lab/WebsiteBench) — Benchmark for agents that reconstruct full-stack websites through browser exploration, evaluated on appearance and behavior.
 - [AgentBoard](https://github.com/hkust-nlp/AgentBoard) — Analytical evaluation with fine-grained progress metrics across 9 agent tasks (NeurIPS 2024 oral). ★~0.4k
 - [GAIA](https://huggingface.co/datasets/gaia-benchmark/GAIA) — 450+ real-world questions requiring reasoning, multimodality, browsing, and tool use (hosted on Hugging Face).
 
